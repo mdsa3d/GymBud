@@ -143,8 +143,10 @@ def detect():
     lmain.configure(image=imgtk)
     lmain.after(10, detect)
 
+    # updates to different labels
     counterBox.configure(text=counter)
-    probBox.configure(text=bodylang_prob[bodylang_prob.argmax()])
+    probBox.configure(text=bodylang_prob[bodylang_prob.argmax()]) # get highest probability value
     classBox.configure(text=current_stage)
+    
 detect()
 window.mainloop() # start the app
